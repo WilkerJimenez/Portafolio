@@ -5,6 +5,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      skew: {
+        '17': '17deg',
+      },
+      fontFamily: {
+        titles: ['PT Serif'],
+        text: ['Nunito']
+      },
     },
   },
   plugins: [],

@@ -1,10 +1,19 @@
 @keyframes logoRotate {
-    0%{transform: rotate(0); }
-    100%{transform: rotate(-5deg) translateY(-65%);}
+    100%{transform: rotate(-5deg) translateY(-65%); visibility: visible;}
 }
 
 @keyframes popInNav {
-    0%{opacity: 0; filter: blur(5px); transform: translateY(20%); }
+    0%{opacity: 0; filter: blur(2px); transform: translateY(20%); }
+    100%{opacity: 1; filter: blur(0); transform: translateY(0); }
+}
+
+@keyframes popInRedes {
+    0%{opacity: 0; filter: blur(3px); transform: translateY(40%); }
+    100%{opacity: 1; filter: blur(0); transform: translateY(0); }
+}
+
+@keyframes popInContainerText {
+    0%{opacity: 0; filter: blur(4px); transform: translateY(90%); }
     100%{opacity: 1; filter: blur(0); transform: translateY(0); }
 }
 
@@ -13,15 +22,23 @@
     100%{opacity: 1; filter: blur(0); transform: translateY(0); }
 }
 
-.contenedor{
-    animation: popInContainer 600ms linear;
-}
-
-.nav{
-    animation: popInNav 600ms linear;
-}
-
 .logo:hover .logoAnimation{
     
     animation: logoRotate 600ms;
+}
+
+.nav{
+    animation: popInNav 500ms linear;
+}
+
+.contenedor .redes{
+    animation: popInContainer 500ms linear;
+}
+
+.contenedor p{
+    animation: popInContainer 500ms linear;
+}
+
+.contenedor{
+    animation: popInContainer 500ms linear;
 }
