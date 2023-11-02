@@ -44,3 +44,18 @@
     animation: popInContainer 500ms linear;
 }
 */
+.icons:hover {
+    transition-duration: 200;
+    opacity: 1;
+}
+.contenedor{
+}
+
+.sec-2 .gridContainer {
+    opacity: 0; filter: blur(5px); left: -100px;
+}
+.sec-2.scrollAnimation .gridContainer{
+    opacity: 1; filter: blur(0); left: 0;
+    transition: 300ms;
+
+}

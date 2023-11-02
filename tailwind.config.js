@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      height: {
+        '38':'38rem',
+      },
       skew: {
         '17': '17deg',
       },
