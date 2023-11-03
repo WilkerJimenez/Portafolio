@@ -43,19 +43,43 @@
 .contenedor{
     animation: popInContainer 500ms linear;
 }
+
+.contenedor{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.nav, .cuerpo > section{
+    scroll-snap-align: start;
+}
 */
+
+@keyframes leftSlide {
+    0%{visibility: visible; filter: blur(5px); transform: translateX(-100%);}
+    100%{opacity: 1; filter: blur(0); transform: translateX(0);}    
+}
+
+@keyframes rightSlide {
+    0%{visibility: visible; filter: blur(5px); transform: translateX(100%);}
+    100%{ opacity: 1; filter: blur(0); transform: translateX(0);}    
+}
+
 .icons:hover {
     transition-duration: 200;
     opacity: 1;
 }
-.contenedor{
-}
 
-.sec-2 .gridContainer {
-    opacity: 0; filter: blur(5px); left: -100px;
+.sec-2.gridContainer {
+    visibility:hidden;
 }
 .sec-2.scrollAnimation .gridContainer{
-    opacity: 1; filter: blur(0); left: 0;
-    transition: 300ms;
+    animation: leftSlide 300ms;
+}
 
+.sec-3.gridContainer {
+    visibility:hidden;
+}
+.sec-3.scrollAnimation .gridContainer{
+    animation: rightSlide 300ms;
 }

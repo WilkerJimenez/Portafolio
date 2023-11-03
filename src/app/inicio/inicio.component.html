@@ -1,5 +1,4 @@
-<div class="bg-cover bg-center bg-fixed contenedor"
-    style="background-image: url(../../assets/background.jpg);">
+<div class="bg-cover bg-center bg-fixed contenedor" style="background-image: url(../../assets/background.jpg);">
     <div id="inicio" class="nav pt-4 backdrop-filter backdrop-blur-lg bg-opacity-30 ">
         <nav class="flex text-lg p-8 w-full justify-between">
             <div class="group flex font-text items-center" style="cursor: pointer;">
@@ -18,10 +17,9 @@
             </div>
             <ul class="flex text-center text-[#deb992] font-bold uppercase font-titles gap-4">
                 <li class="hover:-translate-y-1 duration-200" style="cursor: pointer;"><a href="#inicio">Inicio</a></li>
-                <li class="hover:-translate-y-1 duration-200" style="cursor: pointer;"><a
-                        href="#conocimientos">Conocimientos</a></li>
-                <li class="hover:-translate-y-1 duration-200" style="cursor: pointer;"><a>Experiencias</a></li>
-                <li class="hover:-translate-y-1 duration-200" style="cursor: pointer;"><a>Intereses</a></li>
+                <li id="#conocimientos" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200" style="cursor: pointer;"><a>Conocimientos</a></li>
+                <li id="#experiencias" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200" style="cursor: pointer;"><a>Experiencias</a></li>
+                <li id="" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200" style="cursor: pointer;"><a>Intereses</a></li>
             </ul>
         </nav>
 
@@ -114,56 +112,113 @@
         </div>
     </div>
 
-    <div class="cuerpo font-lg text-lg text-justify bg-[#081c34] w-full">
-        <section id="#conocimientos" class="sec-2">
-            <div class="pt-8 w-full">
-                <h1 class="text-4xl text-center font-titles px-12 text-[#deb992] font-bold tracking-wide">Conocimientos
+    <div class="cuerpo font-lg text-lg text-justify w-full">
+        <section id="scroll_#conocimientos" class="min-h-screen sec-2 bg-[#081c34] flex justify-center items-center">
+            <div class="w-full">
+                <h1 class="text-4xl text-center font-titles text-[#deb992] font-bold tracking-wide">Conocimientos
                 </h1>
                 <div class="flex justify-center w-full pt-6">
                     <div class="border-b-2 border-b-[#deb992]" style="width: 80%;"></div>
                 </div>
-            </div>
-            <div class="flex p-20 font-text text-[#869ba9] w-full">
-                <div style="cursor: pointer;" class="w-full relative grid gridContainer grid-cols-4 flex justify-items-center gap-y-12">
+                <div style="cursor: pointer;"
+                    class="w-full p-20 font-text text-[#869ba9] w-full relative grid gridContainer grid-cols-4 flex justify-items-center gap-y-12">
                     <div class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center">
                         <img src="../../assets/html.png" alt="">
                         <p class="">HTML5</p>
                     </div>
-                    <div style="cursor: pointer;" class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center">
+                    <div style="cursor: pointer;"
+                        class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center">
                         <img src="../../assets/css-3.png" alt="">
                         <p class="">CSS</p>
                     </div>
-                    <div style="cursor: pointer;" class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center">
+                    <div style="cursor: pointer;"
+                        class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center">
                         <img class="" src="../../assets/js.png" alt="">
                         <p class="">JAVASCRIPT</p>
                     </div>
-                    <div style="cursor: pointer;" class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center">
+                    <div style="cursor: pointer;"
+                        class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center">
                         <img class="" src="../../assets/angular.png" alt="">
                         <p class="">ANGULAR</p>
                     </div>
-                    <div style="cursor: pointer;" class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center">
+                    <div style="cursor: pointer;"
+                        class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center">
                         <img class="" src="../../assets/java.png" alt="">
                         <p class="">JAVA</p>
                     </div>
-                    <div style="cursor: pointer;" class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center">
+                    <div style="cursor: pointer;"
+                        class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center">
                         <img class="" src="../../assets/c-sharp.png" alt="">
                         <p class="">C#</p>
                     </div>
-                    <div style="cursor: pointer;" class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center">
+                    <div style="cursor: pointer;"
+                        class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center">
                         <img class="" src="../../assets/sql-server.png" alt="">
                         <p class="">SQL</p>
                     </div>
-                    <div style="cursor: pointer;" class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center">
+                    <div style="cursor: pointer;"
+                        class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center">
                         <img class="" src="../../assets/oracle.png" alt="">
                         <p class="">ORACLE</p>
                     </div>
-                    <div style="cursor: pointer;" class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center col-span-2">
+                    <div style="cursor: pointer;"
+                        class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center col-span-2">
                         <img class="" src="../../assets/git.png" alt="">
                         <p class="">GIT</p>
                     </div>
-                    <div style="cursor: pointer;" class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center col-span-2">
+                    <div style="cursor: pointer;"
+                        class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center col-span-2">
                         <img class="" src="../../assets/scrum.png" alt="">
                         <p class="">SCRUM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="scroll_#experiencias" class="sec-3 flex items-center justify-center min-h-screen bg-[#081424]">
+            <div class="w-full">
+                <h1 class="text-4xl text-center font-titles text-[#deb992] font-bold tracking-wide">
+                    Experiencias
+                </h1>
+                <div class="flex justify-center w-full pt-6">
+                    <div class="border-b-2 border-b-[#deb992]" style="width: 80%;"></div>
+                </div>
+                <div class="flex justify-center pt-10">
+                    <div class="grid grid-cols-3 flex justify-center w-full gridContainer">
+                        <div class="text-right">
+                            <h1 class="text-2xl font-titles text-[#deb992] font-bold tracking-wide">
+                                Educativa
+                            </h1>
+                            <div class="grid grid-row-2 gap-6">
+                                <div class="font-text text-lg font-text text-[#869ba9]">
+                                    <p class="uppercase">Estudios superior</p>
+                                    <p class="font-bold">Instituto Tecnológico de Las Américas (ITLA)</p>
+                                    <p class="text-base">Carrera - Desarrollo Software</p>
+                                    <p class="text-base italic">08/2020 - Actual</p>
+                                </div>
+                                <div class="font-text text-lg font-text text-[#869ba9]">
+                                    <p class="uppercase">Estudios BÁSICO</p>
+                                    <p class="font-bold">Instituto Politécnico Parroquial Santana (IPOPSA)</p>
+                                    <p class="text-base">Tecnico - Desarrollo de Aplicaciones Software</p>
+                                    <p class="text-base italic">08/2020 - Actual</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <div class="border border-[#869ba9]"></div>
+                        </div>
+                        <div class="text-left">
+                            <h1 class="text-2xl font-titles text-[#deb992] font-bold tracking-wide">
+                                Profesional
+                            </h1>
+                            <div class="grid grid-row-1 gap-6">
+                                <div class="font-text text-lg font-text text-[#869ba9]">
+                                    <p class="font-bold">BANCO BHD</p>
+                                    <p class="text-base">Pasante en el área de Desarrollo de Software en un CRM
+                                        especializado.</p>
+                                    <p class="text-base italic">06/2023 - 11/2023</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

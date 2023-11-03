@@ -9,24 +9,10 @@
 html {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
+    overflow-x: hidden;
 }
 
 body {
     background-color: #081424;
-}
-
-::-webkit-scrollbar{
-    width: "5px";
-	background-color: #ccc;
-}
-
-::-webkit-scrollbar-track{
-    width: "5px";
-}
-
-::-webkit-scrollbar-thumb{
-    background: #869ba9;
-    border-radius: "5px";
-    width: "5px";
 }
