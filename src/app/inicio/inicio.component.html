@@ -1,5 +1,5 @@
 <div class="bg-cover bg-center bg-fixed contenedor" style="background-image: url(../../assets/background.jpg);">
-    <div id="inicio" class="nav pt-4 backdrop-filter backdrop-blur-lg bg-opacity-30 ">
+    <div id="inicio" class="nav pt-4 backdrop-filter backdrop-blur-xl bg-opacity-30 ">
         <nav class="flex text-lg p-8 w-full justify-between">
             <div class="group flex font-text items-center" style="cursor: pointer;">
                 <div class="inset-x-16 z-20 flex justify-center absolute bg-[#fff6d2] rounded-md p-1 -skew-y-12"
@@ -16,10 +16,14 @@
                 </div>
             </div>
             <ul class="flex text-center text-[#deb992] font-bold uppercase font-titles gap-4">
-                <li class="hover:-translate-y-1 duration-200" style="cursor: pointer;"><a href="#inicio">Inicio</a></li>
-                <li id="#conocimientos" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200" style="cursor: pointer;"><a>Conocimientos</a></li>
-                <li id="#experiencias" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200" style="cursor: pointer;"><a>Experiencias</a></li>
-                <li id="" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200" style="cursor: pointer;"><a>Intereses</a></li>
+                <li id="#sobremi" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200"
+                    style="cursor: pointer;"><a>Sobre mi</a></li>
+                <li id="#conocimientos" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200"
+                    style="cursor: pointer;"><a>Conocimientos</a></li>
+                <li id="#experiencias" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200"
+                    style="cursor: pointer;"><a>Experiencias</a></li>
+                <li id="" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200"
+                    style="cursor: pointer;"><a>Certificaciones</a></li>
             </ul>
         </nav>
 
@@ -32,7 +36,7 @@
                 <div class="mw-full p-28">
                     <div class="flex justify-center relative items-center grid grid-cols-2">
                         <div class="redes flex justify-center grid grid-row-3 gap-4">
-                            <div class="pb-1 flex items-center icons opacity-50 hover:-translate-y-1 duration-200"
+                            <div (click)="redirect('https://linkedin.com/in/wilkerjim')" class="pb-1 flex items-center icons opacity-50 hover:-translate-y-1 duration-200"
                                 style="cursor: pointer;">
                                 <a>
                                     <span>
@@ -47,7 +51,7 @@
                                 <span class="px-1 text-[#869ba9]">Wilker Jiménez</span>
                             </div>
 
-                            <div class="pb-1 flex items-center icons opacity-50 hover:-translate-y-1 duration-200"
+                            <div (click)="redirect('https://github.com/Wilker04')" class="pb-1 flex items-center icons opacity-50 hover:-translate-y-1 duration-200"
                                 style="cursor: pointer;">
                                 <a>
                                     <span>
@@ -96,7 +100,8 @@
                         <div class="flex justify-center grid grid-row-2 pt-36 p-24 col-span-3">
                             <h1 class="uppercase font-titles text-2xl text-[#deb992]">Wilker Locksly Jimenez Martinez
                             </h1>
-                            <a class="font-text text-lg font-text text-justify text-[#869ba9]">Aplicar mis habilidades
+                            <p class="text-lg font-text text-justify text-[#869ba9]">
+                                Aplicar mis habilidades
                                 de
                                 programación y mi
                                 pasión por la
@@ -104,7 +109,8 @@
                                 soluciones innovadoras en una empresa líder en el sector, mientras crezco
                                 profesionalmente
                                 en un
-                                ambiente dinámico y colaborativo, estoy dispuesto a aprender siempre que haga falta.</a>
+                                ambiente dinámico y colaborativo, estoy dispuesto a aprender siempre que haga falta.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -113,12 +119,58 @@
     </div>
 
     <div class="cuerpo font-lg text-lg text-justify w-full">
-        <section id="scroll_#conocimientos" class="min-h-screen sec-2 bg-[#081c34] flex justify-center items-center">
+        <section id="scroll_#sobremi" class="min-h-screen sec-2 bg-[#081c34] flex justify-center items-center">
+            <div class="w-full">
+                <h1 class="text-4xl text-center font-titles text-[#deb992] font-bold tracking-wide">Sobre mi
+                </h1>
+                <div class="flex justify-center w-full pt-6 px-20">
+                    <div class="border-b-2 border-b-[#deb992] w-full"></div>
+                </div>
+                <div class="grid gridContainer grid-row-2 flex justify-items-center pt-6 p-20">
+                    <div class="">
+                        <h1 class="text-xl text-center font-titles text-[#deb992] font-bold tracking-wide">Biografía
+                        </h1>
+                        <div class="text-lg font-text text-[#869ba9] font-bold">
+                            <p>Desde pequeño me he interesado por el mundo de la informática, desde personalizar mis
+                                dispositivos personales hasta modificar aspectos de mis videojuegos favoritos. Dicha
+                                pasión fue creciendo junto conmigo, estudie Desarrollo de Aplicaciones en la secundaria,
+                                igual que en mi carrera de estudios superiores. A día de hoy me siento orgulloso de
+                                tener la posibilidad de crear cosas útiles con mis propias manos y ansío poder emplear
+                                ese poder para sustentarme algún día.</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 pt-12">
+                        <div class="p-10">
+                            <h1 class="text-xl text-center font-titles text-[#deb992] font-bold tracking-wide">Intereses
+                            </h1>
+                            <div class="text-lg font-bold font-text text-[#869ba9] flex justify-center">
+                                <ul class="list-disc">
+                                    <li>FrontEnd</li>
+                                    <li>BackEnd</li>
+                                    <li>RestAPI</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="p-10 ">
+                            <h1 class="text-xl text-center font-titles text-[#deb992] font-bold tracking-wide">Lenguajes
+                            </h1>
+                            <div class="text-lg font-bold font-text text-[#869ba9] flex justify-center">
+                                <ul class="list-disc">
+                                    <li>Español (Nativo)</li>
+                                    <li>Inglés (Competencia profesional)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="scroll_#conocimientos" class="min-h-screen sec-3 bg-[#081424] flex justify-center items-center">
             <div class="w-full">
                 <h1 class="text-4xl text-center font-titles text-[#deb992] font-bold tracking-wide">Conocimientos
                 </h1>
-                <div class="flex justify-center w-full pt-6">
-                    <div class="border-b-2 border-b-[#deb992]" style="width: 80%;"></div>
+                <div class="flex justify-center w-full pt-6 px-20">
+                    <div class="border-b-2 border-b-[#deb992] w-full"></div>
                 </div>
                 <div style="cursor: pointer;"
                     class="w-full p-20 font-text text-[#869ba9] w-full relative grid gridContainer grid-cols-4 flex justify-items-center gap-y-12">
@@ -174,13 +226,14 @@
                 </div>
             </div>
         </section>
-        <section id="scroll_#experiencias" class="sec-3 flex items-center justify-center min-h-screen bg-[#081424]">
+        <section id="scroll_#experiencias"
+            class="sec-4 flex items-center backdrop-filter backdrop-blur-xl bg-opacity-30 justify-center min-h-screen">
             <div class="w-full">
                 <h1 class="text-4xl text-center font-titles text-[#deb992] font-bold tracking-wide">
                     Experiencias
                 </h1>
-                <div class="flex justify-center w-full pt-6">
-                    <div class="border-b-2 border-b-[#deb992]" style="width: 80%;"></div>
+                <div class="flex justify-center w-full pt-6 px-20">
+                    <div class="border-b-2 border-b-[#deb992] w-full"></div>
                 </div>
                 <div class="flex justify-center pt-10">
                     <div class="grid grid-cols-3 flex justify-center w-full gridContainer">
@@ -199,7 +252,7 @@
                                     <p class="uppercase">Estudios BÁSICO</p>
                                     <p class="font-bold">Instituto Politécnico Parroquial Santana (IPOPSA)</p>
                                     <p class="text-base">Tecnico - Desarrollo de Aplicaciones Software</p>
-                                    <p class="text-base italic">08/2020 - Actual</p>
+                                    <p class="text-base italic">08/2015 - 12/2020</p>
                                 </div>
                             </div>
                         </div>

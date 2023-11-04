@@ -36,4 +36,10 @@ export class InicioComponent implements OnInit {
     link?.scrollIntoView({ behavior: "smooth" })
 
   }
+
+  redirect(url:string){
+    window.open(url, '_blank');
+  }
+
+
 }

@@ -55,6 +55,11 @@
 }
 */
 
+@keyframes fadeIn {
+    0%{opacity: 0; filter: blur(5px);}
+    100%{opacity: 1; filter: blur(0);}    
+}
+
 @keyframes leftSlide {
     0%{visibility: visible; filter: blur(5px); transform: translateX(-100%);}
     100%{opacity: 1; filter: blur(0); transform: translateX(0);}    
@@ -74,12 +79,19 @@
     visibility:hidden;
 }
 .sec-2.scrollAnimation .gridContainer{
-    animation: leftSlide 300ms;
+    animation: fadeIn 400ms;
 }
 
 .sec-3.gridContainer {
     visibility:hidden;
 }
 .sec-3.scrollAnimation .gridContainer{
+    animation: leftSlide 300ms;
+}
+
+.sec-4.gridContainer {
+    visibility:hidden;
+}
+.sec-4.scrollAnimation .gridContainer{
     animation: rightSlide 300ms;
 }
