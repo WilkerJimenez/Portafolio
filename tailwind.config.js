@@ -15,6 +15,9 @@ module.exports = {
         titles: ['PT Serif'],
         text: ['Nunito']
       },
+      screens:{
+        'phone': '360px'
+      }
     },
   },
   plugins: [],
