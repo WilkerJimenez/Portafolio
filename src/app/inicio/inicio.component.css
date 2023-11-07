@@ -79,19 +79,26 @@
     visibility:hidden;
 }
 .sec-2.scrollAnimation .gridContainer{
-    animation: fadeIn 400ms;
+    animation: fadeIn 200ms;
 }
 
 .sec-3.gridContainer {
     visibility:hidden;
 }
 .sec-3.scrollAnimation .gridContainer{
-    animation: leftSlide 300ms;
+    animation: leftSlide 200ms;
 }
 
 .sec-4.gridContainer {
     visibility:hidden;
 }
 .sec-4.scrollAnimation .gridContainer{
-    animation: rightSlide 300ms;
+    animation: rightSlide 200ms;
+}
+
+.sec-5.gridContainer {
+    visibility:hidden;
+}
+.sec-5.scrollAnimation .gridContainer{
+    animation: fadeIn 200ms;
 }
