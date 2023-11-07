@@ -74,12 +74,16 @@
     transition-duration: 200;
     opacity: 1;
 }
+.cellNavAnimation{
+    position: absolute;
+    animation: rightSlide 200ms;
+}
 
 .sec-2.gridContainer {
     visibility:hidden;
 }
 .sec-2.scrollAnimation .gridContainer{
-    animation: fadeIn 200ms;
+    animation: fadeIn 300ms;
 }
 
 .sec-3.gridContainer {
@@ -100,5 +104,5 @@
     visibility:hidden;
 }
 .sec-5.scrollAnimation .gridContainer{
-    animation: fadeIn 200ms;
+    animation: fadeIn 300ms;
 }

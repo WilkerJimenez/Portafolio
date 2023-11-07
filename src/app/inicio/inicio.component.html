@@ -1,12 +1,27 @@
-<div class="bg-cover bg-center bg-fixed contenedor" style="background-image: url(../../assets/background.jpg);">
+<div id="body" class="bg-cover bg-center bg-fixed contenedor" style="background-image: url(../../assets/background.jpg);">
     <div id="inicio" class="nav pt-4 backdrop-filter backdrop-blur-xl bg-opacity-30 ">
-        <a class="flex p-4 justify-end sm:hidden">
-            <svg  style="cursor: pointer;" class="fill-[#deb992] w-10 h-10" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                viewBox="0 0 50 50">
+        <div (click)="navMenu(true)" class="btnMenu block flex p-4 justify-end sm:hidden">
+            <svg id="menuBtn" style="cursor: pointer;" class="duration-200 fill-[#deb992] w-10 h-10" xmlns="http://www.w3.org/2000/svg" x="0px"
+                y="0px" viewBox="0 0 50 50">
                 <path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z">
                 </path>
             </svg>
-        </a>
+        </div>
+        <nav id="cellNav" class="hidden top-0 overflow-hidden backdrop-blur-sm bg-black/90 flex justify-center items-center min-h-screen sm:hidden text-lg p-8 w-full text-center text-[#deb992] font-bold uppercase font-titles"
+            style="z-index: 9999;">
+            <div class="grid grid-row-4 gap-12">
+                <div id="#sobremi" (click)="smoothScroll($event)" class=" hover:-translate-y-1 duration-200"
+                    style="cursor: pointer;"><a>Sobre mi</a></div>
+                <div id="#conocimientos" (click)="smoothScroll($event)"
+                    class="hover:-translate-y-1 duration-200" style="cursor: pointer;"><a>Conocimientos</a>
+                </div>
+                <div id="#experiencias" (click)="smoothScroll($event)"
+                    class="hover:-translate-y-1 duration-200" style="cursor: pointer;"><a>Experiencias</a>
+                </div>
+                <div id="#proyectos" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200"
+                    style="cursor: pointer;"><a>Proyectos</a></div>
+            </div>
+        </nav>
         <nav class="hidden sm:flex text-lg p-8 w-full sm:justify-center lg:justify-between">
             <div class="group flex font-text items-center hidden lg:block" style="cursor: pointer;">
                 <div class="inset-x-16 z-20 flex justify-center absolute bg-[#fff6d2] rounded-md p-1 -skew-y-12"
@@ -44,7 +59,7 @@
                     <div
                         class="grid grid-row-2 gap-y-20 sm:gap-y-20 sm:p-10 md:gap-y-28 md:p-4 lg:px-24 xl:px-40 w-full justify-center">
                         <div class="grid grid-cols-2 flex justify-center">
-                            <div class="redes flex justify-center sm:justify-center grid grid-row-3 sm:gap-4">
+                            <div class="redes justify-center grid grid-row-3 sm:gap-4">
                                 <div (click)="redirect('https://linkedin.com/in/wilkerjim')"
                                     class="sm:pb-1 flex items-center icons opacity-50 hover:-translate-y-1 duration-200"
                                     style="cursor: pointer;">
@@ -202,7 +217,8 @@
                 </div>
                 <div style=""
                     class="w-full pt-4 sm:p-14 md:p-20 font-text text-[#869ba9] w-full relative grid gridContainer grid-cols-2 sm:grid-cols-4 flex justify-items-center gap-y-12">
-                    <div style="cursor: pointer;" class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center">
+                    <div style="cursor: pointer;"
+                        class="gridItems hover:-translate-y-1 duration-200 grid grid-row-2 justify-items-center">
                         <img src="../../assets/html.png" class="w-12 sm:w-14 md:w-16" alt="">
                         <p class="">HTML5</p>
                     </div>
