@@ -56,53 +56,94 @@
 */
 
 @keyframes fadeIn {
-    0%{opacity: 0; filter: blur(5px);}
-    100%{opacity: 1; filter: blur(0);}    
+    0% {
+        opacity: 0;
+        filter: blur(5px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
 }
 
 @keyframes leftSlide {
-    0%{visibility: visible; filter: blur(5px); transform: translateX(-100%);}
-    100%{opacity: 1; filter: blur(0); transform: translateX(0);}    
+    0% {
+        visibility: visible;
+        filter: blur(5px);
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
 }
 
 @keyframes rightSlide {
-    0%{visibility: visible; filter: blur(5px); transform: translateX(100%);}
-    100%{ opacity: 1; filter: blur(0); transform: translateX(0);}    
+    0% {
+        visibility: visible;
+        filter: blur(5px);
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes rightSlideOut {
+    100% {
+        filter: blur(5px);
+        transform: translateX(100%);
+    }
 }
 
 .icons:hover {
     transition-duration: 200;
     opacity: 1;
 }
-.cellNavAnimation{
+
+.cellNavAnimation {
     position: absolute;
     animation: rightSlide 200ms;
 }
 
-.sec-2.gridContainer {
-    visibility:hidden;
+.cellNavAnimationOut {
+    animation: rightSlideOut 200ms;
 }
-.sec-2.scrollAnimation .gridContainer{
+
+.sec-2.gridContainer {
+    visibility: hidden;
+}
+
+.sec-2.scrollAnimation .gridContainer {
     animation: fadeIn 300ms;
 }
 
 .sec-3.gridContainer {
-    visibility:hidden;
+    visibility: hidden;
 }
-.sec-3.scrollAnimation .gridContainer{
+
+.sec-3.scrollAnimation .gridContainer {
     animation: leftSlide 200ms;
 }
 
 .sec-4.gridContainer {
-    visibility:hidden;
+    visibility: hidden;
 }
-.sec-4.scrollAnimation .gridContainer{
+
+.sec-4.scrollAnimation .gridContainer {
     animation: rightSlide 200ms;
 }
 
 .sec-5.gridContainer {
-    visibility:hidden;
+    visibility: hidden;
 }
-.sec-5.scrollAnimation .gridContainer{
+
+.sec-5.scrollAnimation .gridContainer {
     animation: fadeIn 300ms;
 }

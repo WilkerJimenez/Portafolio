@@ -6,6 +6,8 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
+  correo: string = "wilkerjim011";
+  value:boolean = true;
   @HostListener('window:scroll', ['$event'])
   scrollHandler(event: any) {
     let section = document.querySelectorAll('section');
@@ -33,7 +35,7 @@ export class InicioComponent implements OnInit {
     var target = event.srcElement.attributes.id || event.currentTarget.id;
     var link = document.getElementById("scroll_" + target);
     console.log(link)
-    this.navMenu(false);
+    this.navMenu();
     link?.scrollIntoView({ behavior: "smooth" })
 
   }
@@ -42,22 +44,27 @@ export class InicioComponent implements OnInit {
     window.open(url, '_blank');
   }
 
-  navMenu(value: boolean) {
+  navMenu() {
     let body = document.getElementById('body');
     let navegation = document.getElementById('cellNav');
     let btn = document.getElementById('menuBtn');
-    if (value === true) {
+    if (this.value === true) {
+      navegation?.classList.remove("cellNavAnimationOut")
       btn?.classList.remove("-rotate-0")
+      navegation?.classList.remove("hidden")
       btn?.classList.add("-rotate-90")
       body?.classList.add("fixed")
-      navegation?.classList.remove("hidden")
       navegation?.classList.add("cellNavAnimation")
+      this.value = false;
     } else {
+      navegation?.classList.add("cellNavAnimationOut")
+      setTimeout(() => {
+        navegation?.classList.add("hidden")
+      }, 100);
       btn?.classList.remove("-rotate-90")
-      btn?.classList.add("-rotate-0")
       body?.classList.remove("fixed")
-      navegation?.classList.remove("cellNavAnimation")
-      navegation?.classList.add("hidden")
+      btn?.classList.add("-rotate-0")
+      this.value = true;
     }
   }
 
