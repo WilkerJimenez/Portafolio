@@ -12,15 +12,15 @@
             class="hidden top-0 overflow-hidden backdrop-blur-sm bg-black/90 flex justify-center items-center min-h-screen sm:hidden text-lg p-8 w-full text-center text-[#deb992] font-bold uppercase font-titles"
             style="z-index: 9998;">
             <div class="grid grid-row-4 gap-12">
-                <div id="#sobremi" (click)="smoothScroll($event)" class=" hover:-translate-y-1 duration-200"
+                <div id="#sobremi" (click)="smoothScroll($event, true)" class=" hover:-translate-y-1 duration-200"
                     style="cursor: pointer;"><a>Sobre mi</a></div>
-                <div id="#conocimientos" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200"
+                <div id="#conocimientos" (click)="smoothScroll($event, true)" class="hover:-translate-y-1 duration-200"
                     style="cursor: pointer;"><a>Conocimientos</a>
                 </div>
-                <div id="#experiencias" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200"
+                <div id="#experiencias" (click)="smoothScroll($event, true)" class="hover:-translate-y-1 duration-200"
                     style="cursor: pointer;"><a>Experiencias</a>
                 </div>
-                <div id="#proyectos" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200"
+                <div id="#proyectos" (click)="smoothScroll($event, true)" class="hover:-translate-y-1 duration-200"
                     style="cursor: pointer;"><a>Proyectos</a></div>
             </div>
         </nav>
@@ -40,13 +40,13 @@
                 </div>
             </div>
             <ul class="flex text-center text-[#deb992] font-bold uppercase font-titles gap-4">
-                <li id="#sobremi" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200"
+                <li id="#sobremi" (click)="smoothScroll($event, false)" class="hover:-translate-y-1 duration-200"
                     style="cursor: pointer;"><a>Sobre mi</a></li>
-                <li id="#conocimientos" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200"
+                <li id="#conocimientos" (click)="smoothScroll($event, false)" class="hover:-translate-y-1 duration-200"
                     style="cursor: pointer;"><a>Conocimientos</a></li>
-                <li id="#experiencias" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200"
+                <li id="#experiencias" (click)="smoothScroll($event, false)" class="hover:-translate-y-1 duration-200"
                     style="cursor: pointer;"><a>Experiencias</a></li>
-                <li id="#proyectos" (click)="smoothScroll($event)" class="hover:-translate-y-1 duration-200"
+                <li id="#proyectos" (click)="smoothScroll($event, false)" class="hover:-translate-y-1 duration-200"
                     style="cursor: pointer;"><a>Proyectos</a></li>
             </ul>
         </nav>

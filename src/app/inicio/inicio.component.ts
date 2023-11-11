@@ -7,7 +7,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
   correo: string = "wilkerjim011";
-  value:boolean = true;
+  value: boolean = true;
   @HostListener('window:scroll', ['$event'])
   scrollHandler(event: any) {
     let section = document.querySelectorAll('section');
@@ -30,10 +30,12 @@ export class InicioComponent implements OnInit {
   smoothScroll(event: {
     currentTarget: any;
     srcElement: any; target: any;
-  }) {
+  }, mobile: boolean) {
     var target = event.srcElement.attributes.id || event.currentTarget.id;
     var link = document.getElementById("scroll_" + target);
-    this.navMenu();
+    if (mobile == true) {
+      this.navMenu();
+    }
     link?.scrollIntoView({ behavior: "smooth" })
 
   }
