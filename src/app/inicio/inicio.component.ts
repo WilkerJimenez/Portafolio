@@ -15,7 +15,6 @@ export class InicioComponent implements OnInit {
 
     section.forEach(sec => {
       const secTop = sec.getBoundingClientRect().top;
-      console.log(trigger)
       if (secTop < trigger) {
         sec.classList.add('scrollAnimation');
       } else {
@@ -34,7 +33,6 @@ export class InicioComponent implements OnInit {
   }) {
     var target = event.srcElement.attributes.id || event.currentTarget.id;
     var link = document.getElementById("scroll_" + target);
-    console.log(link)
     this.navMenu();
     link?.scrollIntoView({ behavior: "smooth" })
 
